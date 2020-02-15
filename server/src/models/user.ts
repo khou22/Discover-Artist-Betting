@@ -1,4 +1,13 @@
-import { AllowNull, Column, CreatedAt, Model, Table, UpdatedAt } from 'sequelize-typescript';
+import {
+    AllowNull,
+    Column,
+    CreatedAt,
+    HasMany,
+    Model,
+    Table,
+    UpdatedAt,
+} from 'sequelize-typescript';
+import Transaction from './transaction';
 
 @Table({ tableName: 'User' })
 class User extends Model<User> {
@@ -6,18 +15,14 @@ class User extends Model<User> {
     @Column
     username: string;
 
-    @AllowNull(false)
     @Column
-    password: string;
+    firstName: string;
 
     @Column
-    first_name: string;
+    lastName: string;
 
-    @Column
-    last_name: string;
-
-    @Column
-    createdBy: string;
+    @HasMany(() => Transaction)
+    transactions: Transaction[];
 
     @CreatedAt
     createdAt: Date;
