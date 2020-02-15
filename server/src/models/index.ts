@@ -1,6 +1,7 @@
 import { Sequelize } from 'sequelize-typescript';
 import Artist from './artist';
 import Price from './price';
+import Track from './track';
 import Transaction from './transaction';
 import User from './user';
 
@@ -50,7 +51,7 @@ export default (): void => {
         }); // Connect
     }
 
-    sequelize.addModels([Transaction, User, Artist, Price]);
+    sequelize.addModels([Transaction, User, Artist, Price, Track]);
     // if (process.env.NODE_ENV == 'production') {
     //     sequelize.sync(); // Don't corrupt production data
     // } else {

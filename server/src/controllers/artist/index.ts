@@ -1,10 +1,11 @@
 import * as express from 'express';
 import Artist from '../../models/artist';
 import Price from '../../models/price';
+import Track from '../../models/track';
 import { stripPrice } from '../price';
 
 export const getArtists = (req: express.Request, res: express.Response): any => {
-    return Artist.findAll({ include: [Price] })
+    return Artist.findAll({ include: [Price, Track] })
         .then(
             (artists: Artist[]): express.Response => {
                 const data = artists.map((artist: Artist) => ({
