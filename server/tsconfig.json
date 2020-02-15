@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "resolveJsonModule": true,
+        "module": "commonjs",
+        "noImplicitAny": false,
+        "outDir": "dist",
+        "removeComments": true,
+        "sourceMap": true,
+        "target": "es6",
+        "types": [
+            "node", "mocha"
+        ]
+    },
+    "include": [
+        "src/**/*.ts",
+        "tests/src/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

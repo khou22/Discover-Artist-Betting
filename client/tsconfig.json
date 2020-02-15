@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "jsx": "react",
+    "module": "es6",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "declaration": false,
+    "removeComments": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "outDir": "build",
+    "lib": ["es6", "es7", "dom"],
+    "baseUrl": "src",
+    "allowJs": true,
+    "checkJs": false,
+    "paths": {
+      "app/*": ["./client/src/app/*"]
+    }
+  },
+  "include": [
+    "./src/**/*.ts",
+  ],
+  "exclude": ["./build", "../node_modules", "./src/assets/libraries"]
+}

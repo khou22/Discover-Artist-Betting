@@ -1,0 +1,13 @@
+node_modules/
+public/
+esm/
+lib/
+tmp/
+dist/
+*.config.js
+*.d.ts
+lerna.json
+package.json
+package-lock.json
+tsconfig.json
+CHANGELOG.md

@@ -1,0 +1,9 @@
+node_modules
+*.log*
+.vscode
+.idea
+.ds_store
+.module-cache
+
+*.env
+*.secret*
