@@ -1,4 +1,6 @@
 import { Sequelize } from 'sequelize-typescript';
+import Artist from './artist';
+import Price from './price';
 import User from './user';
 
 import logger = require('heroku-logger'); // For logging to the log heroku log file
@@ -47,7 +49,7 @@ export default (): void => {
         }); // Connect
     }
 
-    sequelize.addModels([User]);
+    sequelize.addModels([User, Artist, Price]);
     // if (process.env.NODE_ENV == 'production') {
     //     sequelize.sync(); // Don't corrupt production data
     // } else {
