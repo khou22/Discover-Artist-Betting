@@ -3,12 +3,12 @@
 import * as express from 'express';
 import * as path from 'path';
 import ArtistRoutes from './artist';
-import ExampleRoutes from './exampleRoutes';
+import UserRoutes from './user';
 
 // Requires an app as an input so can direct the user accordingly
 const routes = (app: express.Application): void => {
     // Modular routes
-    ExampleRoutes(app);
+    UserRoutes(app);
     ArtistRoutes(app);
 
     // Serve static files

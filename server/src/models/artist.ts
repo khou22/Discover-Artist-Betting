@@ -1,5 +1,6 @@
 import { Column, CreatedAt, HasMany, Model, Table, UpdatedAt } from 'sequelize-typescript';
 import Price from './price';
+import Transaction from './transaction';
 
 @Table({
     modelName: 'Artist',
@@ -31,6 +32,9 @@ class Artist extends Model<Artist> {
 
     @HasMany(() => Price)
     prices: Price[];
+
+    @HasMany(() => Transaction)
+    transactions: Transaction[];
 
     @CreatedAt
     createdAt: Date;

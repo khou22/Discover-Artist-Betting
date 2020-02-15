@@ -1,11 +1,7 @@
 import * as express from 'express';
 import Artist from '../../models/artist';
 import Price from '../../models/price';
-
-const stripPrice = (price: Price) => ({
-    date: price.date,
-    price: price.price,
-});
+import { stripPrice } from '../price';
 
 export const getArtists = (req: express.Request, res: express.Response): any => {
     return Artist.findAll({ include: [Price] })

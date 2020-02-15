@@ -1,5 +1,6 @@
-import { BelongsTo, Column, ForeignKey, Model, Table } from 'sequelize-typescript';
+import { BelongsTo, Column, ForeignKey, HasMany, Model, Table } from 'sequelize-typescript';
 import Artist from './artist';
+import Transaction from './transaction';
 
 @Table({
     name: {
@@ -21,6 +22,9 @@ class Price extends Model<Price> {
 
     @BelongsTo(() => Artist)
     artist: Artist;
+
+    @HasMany(() => Transaction)
+    transactions: Transaction[];
 }
 
 export default Price;
