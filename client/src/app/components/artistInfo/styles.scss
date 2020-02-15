@@ -1,0 +1,17 @@
+.artistInfo {
+    &-content {
+        display: flex;
+        flex-direction: column;
+        &-cardGrid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem !important;
+        }
+        &-card {
+            width: 6rem;
+            height: 6rem;
+            padding: 1rem;
+        }
+    }
+}

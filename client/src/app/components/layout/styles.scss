@@ -1,0 +1,40 @@
+.layout {
+    &-content {
+        &-divider {
+            &-left {
+                border-left: 1px solid lightgray;
+                height: 100%;
+                position: fixed;
+                left: 17rem;
+                right: 0;
+                position: absolute;
+            }
+            &-right {
+                border-left: 1px solid lightgray;
+                height: 100%;
+                position: fixed;
+                right: 17rem;
+            }
+        }
+        &-center {
+            height: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 17rem;
+            right: 17rem;
+            overflow-x: hidden;
+        }
+        &-right {
+            height: 100%;
+            width: 17rem;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            // background-color: rgba(0, 0, 0, 0.7);
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.rightMenu1 {
+    &-content {
+        display: flex;
+        flex-direction: column;
+        &-profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-img {
+            width: 4rem;
+            margin: 0.5rem;
+        }
+        &-name {
+            margin-top: 0 !important;
+        }
+    }
+}

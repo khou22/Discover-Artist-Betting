@@ -1,0 +1,15 @@
+.stockChart {
+    &-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-card {
+            width: 50rem !important;
+            margin-bottom: 2rem !important;
+        }
+        &-img {
+            width: 95%;
+            margin: 0.5rem;
+        }
+    }
+}
