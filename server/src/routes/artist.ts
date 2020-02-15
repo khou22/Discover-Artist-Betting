@@ -1,7 +1,8 @@
 import * as express from 'express';
-import { getArtists } from '../controllers/artist';
+import { getArtistById, getArtists } from '../controllers/artist';
 
 export default (app: express.Application) => {
-    // Contact form email
     app.get('/api/artist/', getArtists);
+
+    app.get('/api/artist/:id', getArtistById);
 };

@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { InitialStateType as AppPropTypes } from '../../reducers/AppReducer';
+import ArtistInfo from '../artistInfo';
+import LeftMenuOne from '../leftMenu1';
 import AppRouterComponent from '../page';
 import NavigationBar from '../partials';
-import './styles.scss';
-import LeftMenuOne from '../leftMenu1';
 import RightMenuOne from '../rightMenu1';
-import ArtistInfo from '../artistInfo';
-import { Header } from 'semantic-ui-react';
+import './styles.scss';
 
 export type PublicProps = {
     app: AppPropTypes;
