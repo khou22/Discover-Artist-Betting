@@ -145,7 +145,7 @@ exports.default = app;
 /*! exports provided: development, production, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"development\":{\"username\":\"kevinhou\",\"password\":null,\"database\":\"react-express-boilerplate\",\"host\":\"127.0.0.1\",\"port\":5432,\"dialect\":\"postgres\"},\"production\":{\"use_env_variable\":\"DATABASE_URL\"}}");
+module.exports = JSON.parse("{\"development\":{\"username\":\"jeongmincho\",\"password\":null,\"database\":\"discover-artist\",\"host\":\"127.0.0.1\",\"port\":5432,\"dialect\":\"postgres\"},\"production\":{\"use_env_variable\":\"DATABASE_URL\"}}");
 
 /***/ }),
 
