@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import { RouteComponentProps, withRouter } from 'react-router';
 import { ThunkDispatch } from 'redux-thunk';
 import { Card, Header, Loader } from 'semantic-ui-react';
 import { getArtist } from '../../actions/artist';
@@ -16,12 +17,21 @@ export type ReduxProps = {
 
 type State = {};
 
-export type Props = PublicProps & ReduxProps;
+type RouteParams = { id: string };
+
+export type Props = PublicProps & ReduxProps & RouteComponentProps<RouteParams>;
 
 class ArtistInfo extends React.Component<Props, State> {
     componentDidMount() {
-        const { getArtist } = this.props;
-        getArtist('1');
+        const {
+            match: {
+                params: { id },
+            },
+            getArtist,
+        } = this.props;
+        console.log(id);
+
+        getArtist(id);
     }
 
     render() {
@@ -72,7 +82,6 @@ function mapDispatchToProps(dispatch: ThunkDispatch<{}, {}, any>) {
     };
 }
 
-export default (connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(ArtistInfo) as any) as React.ComponentClass<PublicProps>;
+export default withRouter(
+    connect(mapStateToProps, mapDispatchToProps)(ArtistInfo) as any,
+) as React.ComponentClass<PublicProps>;

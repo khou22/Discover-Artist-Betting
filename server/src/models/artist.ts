@@ -31,6 +31,18 @@ class Artist extends Model<Artist> {
     @Column
     foundedYear: number;
 
+    @Column
+    image: string;
+
+    @Column
+    spotifyId: string;
+
+    @Column
+    popularity: number;
+
+    @Column
+    genre: string;
+
     @HasMany(() => Price)
     prices: Price[];
 
