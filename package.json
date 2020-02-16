@@ -72,7 +72,7 @@
     "react-jss": "^8.6.1",
     "react-stockcharts": "^0.7.8",
     "request": "^2.88.0",
-    "sequelize": "^3.34.0",
+    "sequelize": "^5.15.1",
     "sequelize-cli": "^5.4.0",
     "sequelize-typescript": "^0.6.9",
     "uglifyjs-webpack-plugin": "^2.1.2",
