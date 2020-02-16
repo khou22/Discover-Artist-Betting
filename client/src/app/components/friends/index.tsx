@@ -18,7 +18,7 @@ export type Props = PublicProps & ReduxProps & RouteComponentProps;
 class FriendsPage extends React.Component<Props, State> {
     render() {
         const { app } = this.props;
-        return <div>Friends</div>;
+        return <div>Friends {app.someStateValue}</div>;
     }
 }
 

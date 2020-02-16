@@ -5,3 +5,5 @@ export const TEST_ACTION = 'TEST_ACTION';
 
 export const GET_ARTIST_BY_ID = 'GET_ARTIST_BY_ID';
 export const GET_ARTISTS = 'GET_ARTISTS';
+
+export const GET_USER_BY_ID = 'GET_USER_BY_ID';

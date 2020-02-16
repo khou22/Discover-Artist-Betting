@@ -24,6 +24,7 @@ class AppPageComponent extends React.Component<Props, State> {
             <div className="page-content">
                 <Switch>
                     <Route exact path="/artist/:id" render={() => <ArtistInfo />} />
+                    <Route exact path="/user/:id" render={() => <User />} />
                     <Route path="/user" render={() => <User />} />
                     <Route path="/browse" render={() => <Browse />} />
                     <Route path="/friends" render={() => <Friends />} />

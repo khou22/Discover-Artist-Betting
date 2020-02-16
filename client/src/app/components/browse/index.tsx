@@ -34,7 +34,7 @@ class BrowsePage extends React.Component<Props, State> {
 
     render() {
         const {
-            browse: { isLoading, didError, artists },
+            browse: { isLoading, artists },
         } = this.props;
 
         if (isLoading) return <Loader />;

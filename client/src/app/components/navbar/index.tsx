@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
-import { Menu, Search, Header } from 'semantic-ui-react';
+import { Header, Menu, Search } from 'semantic-ui-react';
 import { InitialStateType as AppPropTypes } from '../../reducers/AppReducer';
 import './styles.scss';
 

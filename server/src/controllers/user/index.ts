@@ -18,6 +18,6 @@ export const getUser = (req: UserGetRequest, res: express.Response): any => {
             },
         ],
     })
-        .then((user: User): express.Response => res.status(200).send(user))
-        .catch((error: Error): express.Response => res.status(400).send(error)); // Error
+        .then((user: User): express.Response => res.status(200).send({ success: true, user }))
+        .catch((error: Error): express.Response => res.status(400).send({ success: false, error })); // Error
 };

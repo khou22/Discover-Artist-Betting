@@ -1,10 +1,12 @@
 import { EXAMPLE_UPLOAD_STATE } from '../constants/States';
 
 export interface User {
-    id: number;
     username: string;
-    first_name: string;
-    last_name: string;
+    firstName: string;
+    lastName: string;
+    transactions: Transaction[];
+    createdAt: Date;
+    updatedAt: Date;
 }
 
 export interface ExampleModel {
@@ -46,4 +48,14 @@ export type Track = {
     thumbnail: string;
     releaseDate: string;
     artistId: number;
+};
+
+export type Transaction = {
+    date: Date;
+    userId: number;
+    user: User;
+    artistId: number;
+    artist: Artist;
+    priceId: number;
+    price: Price;
 };
