@@ -5,6 +5,11 @@ export type ExampleResponse = {
     error?: string;
 };
 
+export type GetUsersResponse = {
+    success: boolean;
+    users: Models.User[];
+};
+
 export type GetArtistResponse = {
     success: boolean;
     artist: Models.Artist;
@@ -13,4 +18,9 @@ export type GetArtistResponse = {
 export type GetArtistsResponse = {
     success: boolean;
     artists: Models.Artist[];
+};
+
+export type GetTransactionsResponse = {
+    success: boolean;
+    transactions: Models.Transaction[];
 };

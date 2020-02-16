@@ -18,7 +18,6 @@ export const InitialState: InitialStateType = {
 
 const AppReducer = (state = InitialState, action: any) => {
     const { type, payload } = action;
-    console.log('Payload:', payload);
 
     switch (type) {
         case types.GET_ARTISTS:

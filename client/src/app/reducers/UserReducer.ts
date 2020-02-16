@@ -17,7 +17,6 @@ export const InitialState: InitialStateType = {
 
 const AppReducer = (state = InitialState, action: any) => {
     const { type, payload } = action;
-    console.log('Payload:', payload);
 
     switch (type) {
         case types.GET_USER_BY_ID:
@@ -43,11 +42,14 @@ const AppReducer = (state = InitialState, action: any) => {
                     };
                 },
                 success: (prevState: InitialStateType) => {
-                    const { success, user } = payload;
+                    const { success, user, score } = payload;
                     if (success) {
                         return {
                             ...prevState,
-                            user: user,
+                            user: {
+                                ...user,
+                                score,
+                            },
                         };
                     } else {
                         return {

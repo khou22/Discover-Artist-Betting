@@ -3,6 +3,8 @@
 import * as express from 'express';
 import * as path from 'path';
 import ArtistRoutes from './artist';
+import FriendRoutes from './friends';
+import TransactionRoutes from './transactions';
 import UserRoutes from './user';
 
 // Requires an app as an input so can direct the user accordingly
@@ -10,6 +12,8 @@ const routes = (app: express.Application): void => {
     // Modular routes
     UserRoutes(app);
     ArtistRoutes(app);
+    FriendRoutes(app);
+    TransactionRoutes(app);
 
     // Serve static files
     app.use(express.static('./client/build'));
