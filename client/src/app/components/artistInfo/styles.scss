@@ -2,6 +2,13 @@
     &-content {
         display: flex;
         flex-direction: column;
+        &-heading {
+            display: flex;
+            align-items: center;
+        }
+        &-img {
+            margin: 1rem;
+        }
         &-cardGrid {
             display: flex;
             justify-content: center;
@@ -12,6 +19,12 @@
             width: 100%;
             height: 100%;
             padding: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        &-verify {
+            width: 1.5rem;
+            margin-left: 0.5rem;
         }
     }
 }

@@ -1,19 +1,5 @@
 .page {
     &-content {
         padding: 8px 14px;
-        &-heading {
-            display: flex;
-            align-items: center;
-        }
-        &-name {
-            font-size: 4rem !important;
-            margin-top: 0 !important;
-        }
-        &-img {
-            width: 8rem;
-            height: 8rem;
-            border-radius: 50%;
-            margin: 1rem;
-        }
     }
 }

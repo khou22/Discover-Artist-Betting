@@ -1,6 +1,6 @@
 import * as React from 'react';
 // import './styles.scss';
-import { Feed, Icon } from 'semantic-ui-react';
+import { Feed, Icon, Header } from 'semantic-ui-react';
 
 export type PublicProps = {};
 export type Props = PublicProps;
@@ -8,11 +8,11 @@ export type Props = PublicProps;
 function FeedExampleBasic({}: Props) {
     return (
         <div className="user-content">
-            <h1>Activity Feed</h1>
+            <Header as="h2">Activity Feed</Header>
             <Feed>
                 <Feed.Event>
                     <Feed.Label>
-                        <img src="https://react.semantic-ui.com/images/avatar/small/elliot.jpg" />
+                        <img src="https://i.pravatar.cc/100?1" />
                     </Feed.Label>
                     <Feed.Content>
                         <Feed.Summary>
@@ -28,20 +28,13 @@ function FeedExampleBasic({}: Props) {
                 </Feed.Event>
 
                 <Feed.Event>
-                    <Feed.Label image="/images/avatar/small/helen.jpg" />
+                    <Feed.Label image="https://i.pravatar.cc/100?3" />
                     <Feed.Content>
                         <Feed.Summary>
                             <a>Helen Troy</a> made <a>2 new endorsements</a>
                             <Feed.Date>4 days ago</Feed.Date>
                         </Feed.Summary>
-                        <Feed.Extra images>
-                            <a>
-                                <img src="https://react.semantic-ui.com/images/wireframe/image.png" />
-                            </a>
-                            <a>
-                                <img src="https://react.semantic-ui.com/images/wireframe/image.png" />
-                            </a>
-                        </Feed.Extra>
+
                         <Feed.Meta>
                             <Feed.Like>
                                 <Icon name="like" />1 Like
@@ -51,7 +44,7 @@ function FeedExampleBasic({}: Props) {
                 </Feed.Event>
 
                 <Feed.Event>
-                    <Feed.Label image="/images/avatar/small/jenny.jpg" />
+                    <Feed.Label image="https://i.pravatar.cc/100?7" />
                     <Feed.Content>
                         <Feed.Summary
                             date="2 Days Ago"
@@ -67,7 +60,7 @@ function FeedExampleBasic({}: Props) {
                 </Feed.Event>
 
                 <Feed.Event>
-                    <Feed.Label image="/images/avatar/small/joe.jpg" />
+                    <Feed.Label image="https://i.pravatar.cc/100?9" />
                     <Feed.Content>
                         <Feed.Summary>
                             <a>Joe Henderson</a> posted on his page

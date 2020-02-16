@@ -9,7 +9,6 @@
         z-index: 1;
         top: 0;
         left: 0;
-        // background-color: rgba(0, 0, 0, 0.7);
         overflow-x: hidden;
         padding-top: 20px;
     }
@@ -18,18 +17,9 @@
         width: 12rem;
     }
     &-grid {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 17rem;
-        z-index: 1;
-        margin-top: 0;
-        left: 0;
-        margin-right: 0;
-        overflow-x: hidden;
+        margin-left: 40%;
     }
-    // &-gridCol {
-    //     padding-left: 0;
-    // }
+    &-gridColumn {
+        width: 100%;
+    }
 }

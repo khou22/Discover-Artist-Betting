@@ -20,7 +20,8 @@
     "checkJs": false,
     "paths": {
       "app/*": ["./client/src/app/*"]
-    }
+    },
+    "allowSyntheticDefaultImports":true
   },
   "include": [
     "./src/**/*.ts",

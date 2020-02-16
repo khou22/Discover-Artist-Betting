@@ -19,9 +19,7 @@ function NavigationBar({ app, location: routeLocation }: Props) {
                     <div className="navBar-content-search">
                         <Search></Search>
                     </div>
-                    <Menu.Item active={routeLocation.pathname === '/artist'}>
-                        <Link to={'/artist'}>Artist</Link>
-                    </Menu.Item>
+
                     <Menu.Item active={routeLocation.pathname === '/user'}>
                         <Link to={'/user'}>
                             <div className="navBar-content-profile">

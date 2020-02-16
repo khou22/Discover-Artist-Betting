@@ -1,0 +1,25 @@
+.user {
+    &-content {
+        &-img {
+            margin-right: 1rem;
+        }
+        &-profile {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        &-header {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        &-details {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        &-transaction {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

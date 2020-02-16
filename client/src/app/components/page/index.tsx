@@ -30,17 +30,6 @@ class AppPageComponent extends React.Component<Props, State> {
                     <Route path="/friends" render={() => <Friends />} />
                     <Route path="/" render={() => <Home />} />
                 </Switch>
-                {/* need to move this into artist info */}
-                {/* <div className="page-content-heading">
-                    <img
-                        src="https://i.imgur.com/mMqVYiR.jpg"
-                        className="page-content-img"
-                        alt="avatar"
-                    ></img>
-                    <Header size="huge" className="page-content-name">
-                        Selena Gomez
-                    </Header>
-                </div> */}
             </div>
         );
     }
