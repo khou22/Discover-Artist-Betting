@@ -9,3 +9,8 @@ export type GetArtistResponse = {
     success: boolean;
     artist: Models.Artist;
 };
+
+export type GetArtistsResponse = {
+    success: boolean;
+    artists: Models.Artist[];
+};
