@@ -9,7 +9,7 @@ function StockChart({}: Props) {
     return (
         <div className="stockChart-content">
             <Card className="stockChart-content-card">
-                <img className="stockChart-content-img" src="https://i.imgur.com/4rDartn.png"></img>
+                <img className="stockChart-content-img" src="https://i.imgur.com/gI7P9yF.png"></img>
             </Card>
         </div>
     );

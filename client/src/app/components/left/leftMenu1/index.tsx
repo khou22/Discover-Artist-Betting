@@ -11,7 +11,10 @@ export type Props = PublicProps;
 function LeftMenuOne({}: Props) {
     return (
         <div className="leftMenu1-content">
-            <img className="leftMenu1-img" src={'https://i.imgur.com/KchILRq.png'} />
+            <Link to={'/browse'}>
+                <img className="leftMenu1-img" src={'https://i.imgur.com/KchILRq.png'} />
+            </Link>
+
             <div className="leftMenu1-grid">
                 <Grid columns={3}>
                     <Grid.Row>

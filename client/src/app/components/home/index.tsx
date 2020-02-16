@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router-dom';
 import { ThunkDispatch } from 'redux-thunk';
 import { Header } from 'semantic-ui-react';
-// import { Header } from 'semantic-ui-react';
 import { InitialStateType as AppInitialStateType } from '../../reducers/AppReducer';
+import './styles.scss';
 
 export type PublicProps = {};
 
@@ -20,8 +20,8 @@ class HomePage extends React.Component<Props, State> {
     render() {
         const { app } = this.props;
         return (
-            <div>
-                <Header as="h1">Home Page {app.someStateValue}</Header>
+            <div className="home-content">
+                <Header as="h1">Welcome to Discover {app.someStateValue}</Header>
             </div>
         );
     }
