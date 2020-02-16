@@ -70,6 +70,7 @@
     "pg-hstore": "^2.3.2",
     "piexifjs": "^1.0.4",
     "react-jss": "^8.6.1",
+    "react-stockcharts": "^0.7.8",
     "request": "^2.88.0",
     "sequelize": "^3.34.0",
     "sequelize-cli": "^5.4.0",

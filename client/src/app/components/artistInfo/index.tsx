@@ -33,7 +33,7 @@ class ArtistInfo extends React.Component<Props, State> {
         if (didError) return <Header>{error}</Header>;
 
         // MARK: Artist object is loaded
-        const { monthlyListens, tracks } = artist;
+        const { monthlyListens, tracks, prices } = artist;
 
         return (
             <div className="artistInfo-content">
@@ -54,7 +54,7 @@ class ArtistInfo extends React.Component<Props, State> {
                         </div>
                     </Card>
                 </Card.Group>
-                <StockChart></StockChart>
+                <StockChart prices={prices} />
             </div>
         );
     }
