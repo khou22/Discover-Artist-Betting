@@ -6,7 +6,7 @@ export interface User {
     firstName: string;
     lastName: string;
     transactions: Transaction[];
-    score?: number;
+    score: number;
     createdAt: Date;
     updatedAt: Date;
 }

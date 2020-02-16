@@ -10,7 +10,7 @@ export const InitialState: InitialStateType = {
 };
 
 const AppReducer = (state = InitialState, action: any) => {
-    const { type, payload } = action;
+    const { type } = action;
 
     switch (type) {
         case types.TEST_ACTION:
