@@ -1,6 +1,7 @@
 import AppReducer from './AppReducer';
 import ArtistReducer from './ArtistReducer';
 import BrowseReducer from './BrowseReducer';
+import FriendReducer from './FriendReducer';
 import UserReducer from './UserReducer';
 
 export default {
@@ -8,4 +9,5 @@ export default {
     artist: ArtistReducer,
     browse: BrowseReducer,
     user: UserReducer,
+    friend: FriendReducer,
 };

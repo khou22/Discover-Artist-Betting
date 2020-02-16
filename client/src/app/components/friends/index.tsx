@@ -2,13 +2,15 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { RouteComponentProps } from 'react-router-dom';
 import { ThunkDispatch } from 'redux-thunk';
+import { getFriends } from '../../actions/friends';
 // import { Header } from 'semantic-ui-react';
-import { InitialStateType as AppInitialStateType } from '../../reducers/AppReducer';
+import { InitialStateType as FriendInitialStateType } from '../../reducers/FriendReducer';
 
 export type PublicProps = {};
 
 export type ReduxProps = {
-    app: AppInitialStateType;
+    friend: FriendInitialStateType;
+    getFriends: () => void;
 };
 
 type State = {};
@@ -16,20 +18,27 @@ type State = {};
 export type Props = PublicProps & ReduxProps & RouteComponentProps;
 
 class FriendsPage extends React.Component<Props, State> {
+    componentDidMount() {
+        const { getFriends } = this.props;
+        getFriends();
+    }
+
     render() {
-        const { app } = this.props;
-        return <div>Friends {app.someStateValue}</div>;
+        const { friend } = this.props;
+        return <div>Friends {friend.users.length}</div>;
     }
 }
 
 function mapStateToProps(state: any) {
     return {
-        app: state.app,
+        friend: state.friend,
     };
 }
 
 function mapDispatchToProps(dispatch: ThunkDispatch<{}, {}, any>) {
-    return {};
+    return {
+        getFriends: () => dispatch(getFriends()),
+    };
 }
 
 export default (connect(
