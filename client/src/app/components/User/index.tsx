@@ -1,13 +1,13 @@
+import * as moment from 'moment';
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { ThunkDispatch } from 'redux-thunk';
-import { Header, Loader, Statistic, Item, Divider, Image } from 'semantic-ui-react';
+import { Divider, Header, Image, Item, Loader, Statistic } from 'semantic-ui-react';
 import { getUser } from '../../actions/user';
 import { InitialStateType as AppInitialStateType } from '../../reducers/AppReducer';
 import { InitialStateType as UserInitialStateType } from '../../reducers/UserReducer';
 import FeedExampleBasic from './feed';
-import moment from 'moment';
 import './styles.scss';
 
 export type PublicProps = {};
