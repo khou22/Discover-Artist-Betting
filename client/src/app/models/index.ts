@@ -20,6 +20,10 @@ export type Artist = {
     followers: number;
     bio?: string;
     foundedYear?: number;
+    image: string;
+    spotifyId: string;
+    popularity: number;
+    genre: string;
     prices: Price[];
     tracks: Track[];
     createdAt: Date;

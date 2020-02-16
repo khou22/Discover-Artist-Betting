@@ -5,3 +5,5 @@ export type ExampleRequest = {
 export type GetArtistRequest = {
     id: string;
 };
+
+export type EmptyRequest = {};
