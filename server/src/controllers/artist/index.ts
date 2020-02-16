@@ -4,6 +4,19 @@ import Price from '../../models/price';
 import Track from '../../models/track';
 import { stripPrice } from '../price';
 
+export const getBrowseArtists = (req: express.Request, res: express.Response): any => {
+    return Artist.findAll()
+        .then(
+            (artists: Artist[]): express.Response => {
+                return res.status(200).send({
+                    success: true,
+                    artists,
+                });
+            },
+        )
+        .catch((error: Error): express.Response => res.status(400).send(error)); // Error
+};
+
 export const getArtists = (req: express.Request, res: express.Response): any => {
     return Artist.findAll({ include: [Price, Track] })
         .then(
