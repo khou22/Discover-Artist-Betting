@@ -6,20 +6,21 @@ import * as Models from '../models';
 export type InitialStateType = {
     isLoading: boolean;
     didError: boolean;
-    artist?: Models.Artist;
+    transactions: Models.Transaction[];
     error?: string;
 };
 
 export const InitialState: InitialStateType = {
     isLoading: false,
     didError: false,
+    transactions: [],
 };
 
 const AppReducer = (state = InitialState, action: any) => {
     const { type, payload } = action;
 
     switch (type) {
-        case types.GET_ARTIST_BY_ID:
+        case types.GET_TRANSACTIONS:
             return handle(state, action, {
                 start: (prevState: InitialStateType) => {
                     return {
@@ -42,11 +43,11 @@ const AppReducer = (state = InitialState, action: any) => {
                     };
                 },
                 success: (prevState: InitialStateType) => {
-                    const { success, artist } = payload;
+                    const { success, transactions } = payload;
                     if (success) {
                         return {
                             ...prevState,
-                            artist: artist,
+                            transactions,
                         };
                     } else {
                         return {

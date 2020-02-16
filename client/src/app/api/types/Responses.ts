@@ -19,3 +19,8 @@ export type GetArtistsResponse = {
     success: boolean;
     artists: Models.Artist[];
 };
+
+export type GetTransactionsResponse = {
+    success: boolean;
+    transactions: Models.Transaction[];
+};

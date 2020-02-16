@@ -51,6 +51,7 @@ export type Track = {
 };
 
 export type Transaction = {
+    id: number;
     date: Date;
     userId: number;
     user: User;
