@@ -1,10 +1,12 @@
 import { EXAMPLE_UPLOAD_STATE } from '../constants/States';
 
 export interface User {
+    id: number;
     username: string;
     firstName: string;
     lastName: string;
     transactions: Transaction[];
+    score?: number;
     createdAt: Date;
     updatedAt: Date;
 }

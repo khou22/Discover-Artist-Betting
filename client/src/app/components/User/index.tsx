@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { ThunkDispatch } from 'redux-thunk';
-import { Header, Loader } from 'semantic-ui-react';
+import { Header, Loader, Statistic } from 'semantic-ui-react';
 import { getUser } from '../../actions/user';
 import { InitialStateType as AppInitialStateType } from '../../reducers/AppReducer';
 import { InitialStateType as UserInitialStateType } from '../../reducers/UserReducer';
@@ -46,6 +46,10 @@ class User extends React.Component<Props, State> {
             <div>
                 <Header as="h1">Kevin {app.someStateValue}</Header>
                 <p>{user.firstName}</p>
+                <Statistic>
+                    <Statistic.Label>Credibility</Statistic.Label>
+                    <Statistic.Value>{user.score}</Statistic.Value>
+                </Statistic>
                 <FeedExampleBasic />
             </div>
         );

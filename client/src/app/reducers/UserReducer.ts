@@ -42,11 +42,14 @@ const AppReducer = (state = InitialState, action: any) => {
                     };
                 },
                 success: (prevState: InitialStateType) => {
-                    const { success, user } = payload;
+                    const { success, user, score } = payload;
                     if (success) {
                         return {
                             ...prevState,
-                            user: user,
+                            user: {
+                                ...user,
+                                score,
+                            },
                         };
                     } else {
                         return {

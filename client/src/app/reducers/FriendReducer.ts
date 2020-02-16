@@ -47,7 +47,10 @@ const AppReducer = (state = InitialState, action: any) => {
                     if (success) {
                         return {
                             ...prevState,
-                            users: users,
+                            users: users.map((d) => ({
+                                ...d.user,
+                                score: d.score,
+                            })),
                         };
                     } else {
                         return {
