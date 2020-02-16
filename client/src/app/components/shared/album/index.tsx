@@ -12,11 +12,7 @@ export type Props = PublicProps;
 const Album = ({ artist, onClick }: Props) => {
     return (
         <Card onClick={onClick}>
-            <Image
-                src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
-                wrapped
-                ui={false}
-            />
+            <Image src={artist.image} wrapped ui={false} />
             <Card.Content>
                 <Card.Header>{artist.name}</Card.Header>
             </Card.Content>
