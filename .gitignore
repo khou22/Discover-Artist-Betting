@@ -7,3 +7,4 @@ node_modules
 
 *.env
 *.secret*
+server/src/config/config.json
