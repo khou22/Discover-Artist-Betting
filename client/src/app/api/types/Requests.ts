@@ -7,3 +7,8 @@ export type GetArtistRequest = {
 };
 
 export type EmptyRequest = {};
+
+export type CreateTransactionsRequest = {
+    artistId: number;
+    priceId: number;
+};

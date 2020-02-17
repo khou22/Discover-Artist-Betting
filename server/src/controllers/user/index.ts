@@ -35,7 +35,13 @@ export const getUser = (req: UserGetRequest, res: express.Response): any => {
                     user: user,
                 }),
         )
-        .catch((error: Error): express.Response => res.status(400).send({ success: false, error })); // Error
+        .catch(
+            (error: Error): express.Response => {
+                console.log(error);
+
+                return res.status(400).send({ success: false, error });
+            },
+        ); // Error
 };
 
 export const getFriends = (req: express.Request, res: express.Response): any => {

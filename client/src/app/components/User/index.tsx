@@ -74,9 +74,10 @@ class User extends React.Component<Props, State> {
                                 .sort(function(left, right) {
                                     return moment.utc(left.date).diff(moment.utc(right.date));
                                 })
+                                .reverse()
                                 .map((transaction) => {
                                     return (
-                                        <Item>
+                                        <Item key={transaction.id}>
                                             <Item.Image
                                                 size="tiny"
                                                 src={transaction.artist.image}
