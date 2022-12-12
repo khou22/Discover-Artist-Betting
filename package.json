@@ -54,7 +54,7 @@
     "ejs": "^2.6.1",
     "exif": "^0.6.0",
     "exif-stripper": "0.0.5",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-query-int": "^3.0.0",
     "file-loader": "^4.3.0",
     "google-geocoder": "^0.2.1",
